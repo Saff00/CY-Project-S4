@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+<body>
+    <header>
+        <h1>Titre du site</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="visiteur.html">Je suis visiteur</a></li>
+            <li><a href="utilisateur.html">Je suis utilisateur</a></li>
+            <li><a href="abonné.html">Je suis abonné</a></li>
+          <li><a href="administrateur.html">je suis administrateur</a></li>
+        </ul>
+    </nav>
+
+  
+</body>
+</html>
+
+
+  <!DOCTYPE html>
+    <html lang="fr">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>replit</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+      </head>
+
+  <body>
+      <h1>Inscription</h1>
+      <form action="submit_inscription.php" method="post" enctype="multipart/form-data"> 
+        
+        <!-- 
+        action: URL de la page inscription, php pour traiter efficacement les données envoyées par l'utilisateur et enregistrer ses informations.
+         method pour envoyé le formulaire, post pour cacher les informations contrairement a get.
+        multipart/form-data parce qu'on inclu des fichiers (photos).Ce type d'encodage permet de séparer les différentes parties du formulaire (texte, fichiers) en plusieurs "parties", chacune avec son propre type de contenu. -->
