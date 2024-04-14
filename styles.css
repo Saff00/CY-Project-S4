@@ -1,0 +1,38 @@
+/* styles.css */
+.message {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.sender {
+    font-weight: bold;
+}
+.content {
+    margin-top: 5px;
+}
+
+/* Pour la zone de saisie de message */
+#messageInput {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#messageForm button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: DodgerBlue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#messageForm button:hover {
+    background-color: RoyalBlue;
+}

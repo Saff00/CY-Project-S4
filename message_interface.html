@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Dating Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Messages</h2>
+    <div id="conversation">
+        <!-- Liste des messages -->
+        <div class="message">
+            <div class="sender">Sender</div>
+            <div class="content">Message content</div>
+        </div>
+        <!-- Autres messages... -->
+    </div>
+    <form id="messageForm" action="send_message.php" method="post">
+        <textarea id="messageInput" name="message" placeholder="Type your message here..." required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    
+    <!-- Ajout d'un lien vers le script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
