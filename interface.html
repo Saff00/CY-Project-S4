@@ -33,34 +33,87 @@
 
 
 <!--   PAGE VISITEUR -->
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>replit</title>
+    <title>Visiteur</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
 
 
-<a href="inscription.html" class="button-link">S'inscrire</a>
+        
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lightpink;
+        }
 
-<style>
-  .button-link {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: lightpink;
-    color: white;
-    text-align: center;
-    border-radius: 10px;
-  }
-  .button-link:hover {
-    background-color: #45a049;
-  }
-</style>
+        .login-container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 5px;
+            margin-top: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .button-link, input[type="submit"] {
+            width: 100%;  
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: lightpink;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .button-link:hover, input[type="submit"]:hover {
+            background-color: lightpink;
+        }
+
+        .account-text {
+            margin: 20px 0 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Connexion</h2>
+        <form action="submit_login.php" method="post">
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Se connecter" class="button-link">  
+        </form> <br> </br> <br> </br> <br> </br>
+        <div class="account-text">Vous n'avez pas de compte ?</div>
+        <a href="inscription.html" class="button-link">S'inscrire</a>  
+    </div>
+</body>
+</html>
 
 
 
