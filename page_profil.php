@@ -111,9 +111,7 @@ if (isset($_SESSION['email'])) {
             <button onclick="window.location.href='modifier_profil.php'">Modifier le profil</button>
             <button onclick="window.location.href='dern_prof.php'">Consulter les profils</button>
             
-                
-            <?php } ?>
-           
+      
         
         </div>
     </div>
