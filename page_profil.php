@@ -110,9 +110,15 @@ if (isset($_SESSION['email'])) {
         <div class="header-buttons">
             <button onclick="window.location.href='modifier_profil.php'">Modifier le profil</button>
             <button onclick="window.location.href='dern_prof.php'">Consulter les profils</button>
-            
-      
-        
+            <?php if ($abonnement == 'premium' || $abonnement == 'essai') { ?>
+                <button onclick="window.location.href='boite_messagerie.php'">Messagerie</button>
+            <?php } ?>
+            <button onclick="window.location.href='offre_abo.html'">Offres d'abonnement</button>
+            <?php
+            if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) {
+                echo '<button onclick="window.location.href=\'admin_dashboard.php\'">Admin</button>';
+            }
+            ?>
         </div>
     </div>
     <div class="content">
@@ -123,7 +129,8 @@ if (isset($_SESSION['email'])) {
             <p><strong>Nom :</strong> <?php echo $user_data[1]; ?></p>
             <p><strong>Date de naissance :</strong> <?php echo $user_data[2]; ?></p>
             <p><strong>Sexe :</strong> <?php echo $user_data[3]; ?></p>
-           
+            <p><strong>Description physique :</strong> <?php echo $user_data[4]; ?></p>
+            <p><strong>Statut relationnel :</strong> <?php echo $user_data[5]; ?></p>
             <p><strong>Ville :</strong> <?php echo $user_data[6]; ?></p>
             <p><strong>Email :</strong> <?php echo $user_data[7]; ?></p>
             <?php
