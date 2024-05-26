@@ -61,7 +61,7 @@ $recipient = isset($_GET['recipient']) ? $_GET['recipient'] : '';
             padding: 20px;
             height: 100vh;
             background-color: #e5ddd5;
-            background-image: url('voiture2.jpg');
+            background-image: url('travel_shuffle.jpg');
         }
 
         .user-list {
