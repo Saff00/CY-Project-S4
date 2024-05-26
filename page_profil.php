@@ -14,17 +14,19 @@ if (isset($_SESSION['email'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil</title>
+    <title>Profil - Travel Shuffle</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
+            background: url('pgin.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
         }
 
         .bhead {
-            background-color: black;
+            background-color: rgba(32, 178, 170, 0.8); /* Pastel sea green */
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
@@ -40,12 +42,17 @@ if (isset($_SESSION['email'])) {
             margin: 0;
         }
 
+        .header-title a {
+            color: white;
+            text-decoration: none;
+        }
+
         .header-buttons {
             display: flex;
         }
 
         .bhead button {
-            background-color: green;
+            background-color: rgba(32, 178, 170, 0.9); /* Pastel sea green */
             color: white;
             padding: 10px 20px;
             border: none;
@@ -56,24 +63,25 @@ if (isset($_SESSION['email'])) {
         }
 
         .bhead button:hover {
-            background-color: darkgreen;
+            background-color: rgba(32, 178, 170, 1); /* Slightly darker pastel sea green */
         }
 
         .content {
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('voyage.jpg');
+            min-height: 100vh;
         }
 
         .white-block {
-            background-color: white;
+            background-color: off;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
             text-align: center;
             max-width: 90%;
             margin: auto;
+            margin-top: 80px; /* To avoid overlap with the fixed header */
         }
 
         .hero-section h2 {
@@ -95,18 +103,19 @@ if (isset($_SESSION['email'])) {
         }
 
         .page-title {
-            background-color: green;
+            background-color: rgba(32, 178, 170, 0.9); /* Pastel sea green */
             color: white;
             text-align: center;
             padding: 10px 0;
             margin-top: 0;
+            border-radius: 10px;
         }
     </style>
 </head>
 
 <body>
     <div class="bhead">
-        <h1 class="header-title"><a href="index.html" style="color: white; text-decoration: none;">voyage</a></h1>
+        <h1 class="header-title"><a href="index.html">Travel Shuffle</a></h1>
         <div class="header-buttons">
             <button onclick="window.location.href='modifier_profil.php'">Modifier le profil</button>
             <button onclick="window.location.href='dern_prof.php'">Consulter les profils</button>
@@ -150,6 +159,7 @@ if (isset($_SESSION['email'])) {
 </body>
 
 </html>
+
 <?php
             exit();
         }
