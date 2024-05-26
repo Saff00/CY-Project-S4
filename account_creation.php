@@ -5,7 +5,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $birthdate = $_POST["birthdate"];
     $gender = $_POST["gender"];
-  
+    $physical_description = isset($_POST["physical_description"]) ? $_POST["physical_description"] : "";
+    $relationship_status = isset($_POST["relationship_status"]) ? $_POST["relationship_status"] : "";
     $city = $_POST["city"];
     $email = $_POST["email"];
     $password = $_POST["password"];
@@ -26,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $filename = 'utilisateurs.txt';
- 
+    $bannedFile = 'bannissements.txt';
     $emailExists = false;
 
     // Check if email is banned
@@ -62,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $dest_path = $uploadFileDir . $newFileName;
 
         if (move_uploaded_file($fileTmpPath, $dest_path)) {
-            $data = $firstname . ',' . $name . ',' . $birthdate . ',' . $gender . ',' .  $city . ',' . $email . ',' . $password . ',' . $newFileName  . PHP_EOL;
+            $data = $firstname . ',' . $name . ',' . $birthdate . ',' . $gender . ',' . $physical_description . ',' . $relationship_status . ',' . $city . ',' . $email . ',' . $password . ',' . $newFileName . ',' . $adminstatut . ',' . $subscriptionType . PHP_EOL;
             file_put_contents($filename, $data, FILE_APPEND | LOCK_EX);
             header("Location: page_connexion.html");
             exit();
