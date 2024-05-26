@@ -1,0 +1,127 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('pgin.jpg'); /* Ensure this image is placed in the correct directory */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+.headerProfile {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #98fb98 0%, #2e8b57 100%); /* pastel sea green gradient */
+    color: #fff;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.headerProfile h1 {
+    margin: 0;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.containerInscription {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+    font-size: 1.2em;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 1.1em;
+}
+
+.gender-options {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+button {
+    background-color: #98fb98; /* pastel sea green */
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: #2e8b57; /* darker shade of pastel sea green */
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #2e8b57; /* Use pastel sea green for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 1.1em;
+}
+
+a:hover {
+    color: #98fb98; /* Lighter shade on hover */
+}
+
+#profile_pic_preview {
+    display: none;
+    max-width: 100px;
+    margin-top: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+input[type="file"] {
+    margin-top: 10px;
+    color: #2e8b57; /* Use pastel sea green for file input */
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONNEXION - Travel Shuffle</title>
+    <link rel="stylesheet" href="style_connexion.css">
+</head>
+<body>
+    <header class="headerProfile">
+        <h1>Connexion</h1>
+    </header>
+    <div class="containerLogin">
+        <div class="intro-text">
+            <p>Connectez-vous pour accéder à votre compte et découvrir de nouvelles aventures !</p>
+        </div>
+        <form action="login.php" method="POST">
+            <label for="email">Nom d'utilisateur :</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <div class="links">
+            <a href="index.html">Revenir à Travel Shuffle</a>
+            <a href="page_inscription.html">Inscrivez-vous ici</a>
+        </div>
+        <div class="info">
+            <p>Vous avez oublié votre mot de passe ? <a href="forgot_password.html">Cliquez ici</a> pour le réinitialiser.</p>
+        </div>
+    </div>
+</body>
+</html>

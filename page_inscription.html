@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSCRIPTION - Travel Shuffle</title>
+    <link rel="stylesheet" href="styl_inscr.css">
+</head>
+<body>
+    <a href="index.html" id="lien-accueil">
+        <h1>Travel Shuffle</h1>
+    </a>
+    <header class="headerProfile">
+        <h1>Créer un compte</h1>
+    </header>
+    <div class="containerInscription">
+        <form method="POST" action="account_creation.php" enctype="multipart/form-data">
+            <label for="firstname">Prénom</label>
+            <input type="text" name="firstname" maxlength="20" required>
+            <label for="name">Nom</label>
+            <input type="text" name="name" maxlength="20" required>
+            <label for="birthdate">Date de naissance</label>
+            <input type="date" name="birthdate" required>
+            <label for="gender">Sexe :</label>
+            <div class="gender-options">
+                <input type="radio" id="male" name="gender" value="homme" required>
+                <label for="male">Homme</label>
+                <input type="radio" id="female" name="gender" value="femme" required>
+                <label for="female">Femme</label>
+            </div>
+            <label for="relationship_status">Statut relationnel :</label>
+            <select id="relationship_status" name="relationship_status">
+                <option value="célibataire">Célibataire</option>
+                <option value="en couple">En couple</option>
+                <option value="marié(e)">Marié(e)</option>
+                <option value="divorcé(e)">Divorcé(e)</option>
+                <option value="veuf/veuve">Veuf/Veuve</option>
+            </select>
+            <label for="city">Ville</label>
+            <input type="text" name="city" placeholder="Cergy" maxlength="25" required>
+            <label for="favorite_destination">Destination préférée</label>
+            <input type="text" name="favorite_destination" placeholder="Paris, Tokyo, New York..." maxlength="50" required>
+            <label for="travel_experience">Expérience de voyage</label>
+            <textarea id="travel_experience" name="travel_experience" placeholder="Décrivez vos expériences de voyage" maxlength="500"></textarea>
+            <label for="email">Adresse mail</label>
+            <input type="email" name="email" required>
+            <label for="password">Mot de Passe</label>
+            <input type="password" name="password" maxlength="20" required>
+            <label for="passwordConf">Confirmation du mot de passe</label>
+            <input type="password" name="passwordConf" maxlength="20" required>
+            <label for="profile_pic">Photo de profil</label>
+            <input type="file" name="profile_pic" id="profile_pic_input" accept="image/*">
+            <img id="profile_pic_preview" src="#" alt="Prévisualisation de la photo de profil">
+            <button name="submit" type="submit">S'inscrire</button>
+        </form>
+        <div class="links">
+            <a href="index.html">Retour à l'accueil</a>
+            <a href="page_connexion.html">Déjà inscrit ? Connectez-vous ici</a>
+        </div>
+    </div>
+    <script>
+        function previewProfilePic(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById('profile_pic_preview').style.display = 'block';
+                    document.getElementById('profile_pic_preview').src = e.target.result;
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        document.getElementById('profile_pic_input').addEventListener('change', function() {
+            previewProfilePic(this);
+        });
+    </script>
+</body>
+</html>
