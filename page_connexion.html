@@ -1,0 +1,168 @@
+<!DOCTYPEhtml>
+<html lang="fr">
+<tête>
+<méta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONNEXION - CY-Voyage</title>
+<style>
+corps {
+famille de polices : « Open Sans », sans-serif ;
+couleur d'arrière-plan : #f5f5f5 ;
+marge : 0 ;
+remplissage : 0 ;
+affichage : flexible ;
+direction flexible : colonne ;
+align-items : centre ;
+image d'arrière-plan : url('voyage.jpg');
+taille de l'arrière-plan : couverture ;
+position d'arrière-plan : centre ;
+couleur : #333 ;
+}
+
+en-tête.headerProfile {
+alignement du texte : centre ;
+remplissage : 20px 0 ;
+arrière-plan : dégradé linéaire (135 degrés, #6B73FF 0 %, #000DFF 100 %) ;
+couleur : #fff ;
+largeur : 100 % ;
+box-shadow : 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header.headerProfile h1 {
+marge : 0 ;
+taille de police : 28 px ;
+transformation de texte : majuscule ;
+espacement des lettres : 2 px ;
+}
+
+.containerConnexion {
+arrière-plan : rgba(255, 255, 255, 0,9) ;
+remplissage : 20 px ;
+rayon de bordure : 10 px ;
+box-shadow : 0 4px 10px rgba(0, 0, 0, 0.1);
+largeur maximale : 600 px ;
+marge : 20px ;
+}
+
+.Texte d'introduction {
+alignement du texte : centre ;
+taille de police : 1,3em ;
+couleur : #fff ;
+texte-ombre : 1px 1px 2px #000 ;
+marge inférieure : 20 px ;
+}
+
+formulaire {
+affichage : flexible ;
+direction flexible : colonne ;
+align-items : centre ;
+largeur : 100 % ;
+}
+
+étiquette {
+poids de la police : gras ;
+marge supérieure : 15 px ;
+couleur : #333 ;
+taille de police : 1,2 em ;
+}
+
+entrée[type="text"],
+input[type="mot de passe"] {
+largeur : 100 % ;
+remplissage : 15 px ;
+marge : 10px 0 ;
+bordure : 1px solide #ccc ;
+rayon de bordure : 5 px ;
+arrière-plan : rgba(255, 255, 255, 0,7) ;
+taille de police : 1,1em ;
+}
+
+bouton {
+couleur d'arrière-plan : #6B73FF ;
+couleur : #fff ;
+curseur : pointeur ;
+remplissage : 15 px ;
+bordure : aucune ;
+rayon de bordure : 5 px ;
+transition : facilité de couleur d'arrière-plan de 0,3 s ;
+largeur : 100 % ;
+marge supérieure : 20 px ;
+transformation de texte : majuscule ;
+poids de la police : gras ;
+taille de police : 1,2 em ;
+}
+
+bouton : survoler {
+couleur d'arrière-plan : #000DFF ;
+}
+
+un {
+bloc de visualisation;
+alignement du texte : centre ;
+marge supérieure : 20 px ;
+couleur : #fff ;
+décoration de texte : aucune ;
+transition : couleur facilité 0,3 s ;
+texte-ombre : 1px 1px 2px #000 ;
+taille de police : 1,1em ;
+}
+
+a: survolez {
+couleur : #ddd ;
+}
+
+.logo {
+bloc de visualisation;
+marge : 20px automatique ;
+largeur maximale : 100 px ;
+transition : transformation facile en 0,3 s ;
+}
+
+.logo : survoler {
+transformation : échelle (1.1);
+}
+
+.Info {
+arrière-plan : rgba(255, 255, 255, 0,8) ;
+remplissage : 10 px ;
+rayon de bordure : 5 px ;
+box-shadow : 0 2px 5px rgba(0, 0, 0, 0.1);
+marge supérieure : 20 px ;
+alignement du texte : centre ;
+}
+
+.info un {
+couleur : #6B73FF ;
+décoration de texte : aucune ;
+poids de la police : gras ;
+}
+
+.info a: survoler {
+décoration de texte : souligner ;
+}
+</style>
+</tête>
+<corps>
+<header class="headerProfile">
+<h1>Connexion</h1>
+</en-tête>
+<div class="containerLogin">
+<div class="intro-text">
+<p>Connectez-vous pour accéder à votre compte et découvrir de nouvelles aventures !</p>
+</div>
+<form action="login.php" méthode="POST">
+<label for="email">Nom d'utilisateur :</label><br>
+<input type="text" id="email" name="email" requis><br>
+<label for="password">Mot de passe :</label><br>
+<input type="password" id="password" name="password" requis><br>
+<button type="submit">Se connecter</button>
+</form>
+<a href="index.html">Revenir à CY-Voyage</a>
+<a href="page_inscription.html">Inscrivez-vous ici</a>
+<a href="index.html" id="lien-accueil"><img src="logoAI.jpg" alt="Accueil" class="logo"></a>
+<div class="info">
+<p>Vous avez oublié votre mot de passe ? <a href="forgot_password.html">Cliquez ici</a> pour le réinitialiser.</p>
+</div>
+</div>
+</corps>
+</html>

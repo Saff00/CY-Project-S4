@@ -1,0 +1,113 @@
+corps {
+famille de polices : « Open Sans », sans-serif ;
+couleur d'arrière-plan : #f5f5f5 ;
+marge : 0 ;
+remplissage : 0 ;
+affichage : flexible ;
+direction flexible : colonne ;
+align-items : centre ;
+image d'arrière-plan : url('voyage.jpg');
+taille de l'arrière-plan : couverture ;
+position d'arrière-plan : centre ;
+couleur : #333 ;
+}
+
+en-tête.headerProfile {
+alignement du texte : centre ;
+remplissage : 20px 0 ;
+arrière-plan : dégradé linéaire (135 degrés, #6B73FF 0 %, #000DFF 100 %) ;
+couleur : #fff ;
+largeur : 100 % ;
+box-shadow : 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header.headerProfile h1 {
+marge : 0 ;
+taille de police : 28 px ;
+transformation de texte : majuscule ;
+espacement des lettres : 2 px ;
+}
+
+formulaire {
+marge supérieure : 20 px ;
+affichage : flexible ;
+direction flexible : colonne ;
+align-items : centre ;
+largeur : 80 % ;
+}
+
+étiquette {
+poids de la police : gras ;
+marge supérieure : 15 px ;
+couleur : #fff ;
+texte-ombre : 1px 1px 2px #000 ;
+taille de police : 1,2 em ;
+}
+
+entrée[type="text"],
+entrée[type="date"],
+entrée[type="email"],
+entrée[type="mot de passe"],
+zone de texte,
+sélectionner {
+largeur : 100 % ;
+remplissage : 15 px ;
+marge : 10px 0 ;
+bordure : 1px solide #ccc ;
+rayon de bordure : 5 px ;
+arrière-plan : rgba(255, 255, 255, 0,7) ;
+taille de police : 1,1em ;
+}
+
+entrée[type="radio"],
+entrée[type="checkbox"] {
+marge droite : 10 px ;
+transformation : échelle (1.2);
+}
+
+bouton {
+couleur d'arrière-plan : #6B73FF ;
+couleur : #fff ;
+curseur : pointeur ;
+remplissage : 15 px ;
+bordure : aucune ;
+rayon de bordure : 5 px ;
+transition : facilité de couleur d'arrière-plan de 0,3 s ;
+largeur : 100 % ;
+marge supérieure : 20 px ;
+transformation de texte : majuscule ;
+poids de la police : gras ;
+taille de police : 1,2 em ;
+}
+
+bouton : survoler {
+couleur d'arrière-plan : #000DFF ;
+}
+
+un {
+bloc de visualisation;
+alignement du texte : centre ;
+marge supérieure : 20 px ;
+couleur : #fff ;
+décoration de texte : aucune ;
+transition : couleur facilité 0,3 s ;
+texte-ombre : 1px 1px 2px #000 ;
+taille de police : 1,1em ;
+}
+
+a: survolez {
+couleur : #ddd ;
+}
+
+#profile_pic_preview {
+affichage : aucun ;
+largeur maximale : 100 px ;
+marge supérieure : 10 px ;
+rayon de bordure : 50 % ;
+box-shadow : 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+entrée[type="fichier"] {
+marge supérieure : 10 px ;
+couleur : #fff ;
+}

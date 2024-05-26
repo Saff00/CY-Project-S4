@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .bhead {
+            background-color: black;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-title {
+            color: white;
+            margin: 0;
+        }
+        .header-buttons {
+            display: flex;
+        }
+        .bhead button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        .bhead button:hover {
+            background-color: darkgreen;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-block {
+            background-color: white;
+            padding: 40px; 
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 50px; 
+        }
+
+        .hero-section h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .hero-section h3 {
+            font-size: 18px;
+            color: #666;
+            margin-top: 0;
+        }
+
+        .content {
+            background-image: url('voyage.jpg');
+        }
+    </style>
+</head>
+<body>
+    <div class="bhead">
+        <h1 class="header-title"><a href="index.html">voyage</a></h1>
+        <div class="header-buttons">
+            <form>
+                <a href="dern_prof.php">
+                    <button type="button">Consulter les profils</button>
+                </a>
+                <a href="page_profil.php">
+                    <button type="button">Votre profil</button>
+                </a>
+            </form>
+        </div>
+    </div>
+    <div class="content">
+        <div class="white-block hero-section">
+            <h2>Recherche</h2>
+            <input type="text" id="searchInput" placeholder="*******" style="width: 300px; height: 40px; font-size: 16px;"> 
+            <button onclick="search()" style="height: 40px; font-size: 16px;">Search</button> 
+            <div id="profiles"></div>
+        </div>
+    </div>
+    <script>
+        function search() {
+            var input, filter;
+            input = document.getElementById('searchInput');
+            filter = input.value.toLowerCase();
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("profiles").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "search.php?query=" + filter, true);
+            xmlhttp.send();
+        }
+    </script>
+</body>
+</html>
