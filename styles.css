@@ -1,89 +1,94 @@
-/* Nouveau styles.css */
-corps {
-famille de polices : « Open Sans », sans-serif ;
-couleur d'arrière-plan : #f5f5f5 ;
-marge : 0 ;
-remplissage : 0 ;
-affichage : flexible ;
-direction flexible : colonne ;
-align-items : centre ;
-image d'arrière-plan : url('voyage.jpg');
+/* Reset some basic elements */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
 }
 
-.récipient {
-largeur : 100 % ;
-largeur maximale : 1 200 px ;
-remplissage : 20 px ;
-marge : 20px 0 ;
-couleur de fond : blanc ;
-rayon de bordure : 10 px ;
-box-shadow : 0 4px 20px rgba(0, 0, 0, 0.1);
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background: url('travel_shuffle.jpg') no-repeat center center fixed; /* local image */
+    background-size: cover;
+    color: #333;
+    padding: 20px;
 }
 
-.hero-section {
-alignement du texte : centre ;
-remplissage : 50px 20px ;
-arrière-plan : dégradé linéaire (135 degrés, #6B73FF 0 %, #000DFF 100 %) ;
-Couleur blanche;
-rayon de bordure : 10 px ;
+/* Header styling */
+header {
+    background: rgba(255, 255, 255, 0.8);
+    color: #35424a;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid rgba(255, 175, 189, 0.8);
 }
 
-.hero-section h2 {
-taille de police : 3em ;
-marge inférieure : 20 px ;
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.hero-section h3 {
-taille de police : 2em ;
-poids de la police : 300 ;
+header nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-.boutons d'action {
-affichage : flexible ;
-justifier-contenu : centre ;
-marge supérieure : 30 px ;
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
-.boutons d'action a {
-décoration de texte : aucune ;
-marge : 0 10px ;
+header nav ul li a {
+    color: #35424a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
 }
 
-Bouton .action-boutons {
-couleur d'arrière-plan : #6B73FF ;
-Couleur blanche;
-bordure : aucune ;
-remplissage : 15px 30px ;
-taille de police : 1,2 em ;
-rayon de bordure : 5 px ;
-curseur : pointeur ;
-transition : couleur d'arrière-plan 0,3 s ;
+header nav ul li a:hover {
+    background: rgba(255, 175, 189, 0.8);
+    color: #ffffff;
+    border-radius: 5px;
 }
 
-Bouton .action-buttons : survolez {
-couleur d'arrière-plan : #000DFF ;
+/* Main section styling */
+main {
+    margin: 20px 0;
 }
 
-.features-section {
-affichage : flexible ;
-justifier-contenu : espace autour ;
-marge supérieure : 40 px ;
+main section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.fonctionnalité {
-couleur d'arrière-plan : #ffffff ;
-remplissage : 20 px ;
-largeur : 30 % ;
-rayon de bordure : 10 px ;
-box-shadow : 0 4px 10px rgba(0, 0, 0, 0.1);
-alignement du texte : centre ;
+main section h2 {
+    margin-bottom: 10px;
+    color: #35424a;
 }
 
-.fonctionnalité h4 {
-taille de police : 1,5em ;
-marge inférieure : 10 px ;
+main section p {
+    line-height: 1.6;
+    color: #555;
 }
 
-.fonctionnalité p {
-couleur : #666666 ;
+/* Footer styling */
+footer {
+    background: rgba(255, 255, 255, 0.8);
+    color: #35424a;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 5px solid rgba(255, 175, 189, 0.8);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Optional: custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
 }

@@ -1,113 +1,127 @@
-corps {
-famille de polices : « Open Sans », sans-serif ;
-couleur d'arrière-plan : #f5f5f5 ;
-marge : 0 ;
-remplissage : 0 ;
-affichage : flexible ;
-direction flexible : colonne ;
-align-items : centre ;
-image d'arrière-plan : url('voyage.jpg');
-taille de l'arrière-plan : couverture ;
-position d'arrière-plan : centre ;
-couleur : #333 ;
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('pgin.jpg'); /* Ensure this image is placed in the correct directory */
+    background-size: cover;
+    background-position: center;
+    color: #333;
 }
 
-en-tête.headerProfile {
-alignement du texte : centre ;
-remplissage : 20px 0 ;
-arrière-plan : dégradé linéaire (135 degrés, #6B73FF 0 %, #000DFF 100 %) ;
-couleur : #fff ;
-largeur : 100 % ;
-box-shadow : 0 4px 10px rgba(0, 0, 0, 0.3);
+.headerProfile {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #98fb98 0%, #2e8b57 100%); /* pastel sea green gradient */
+    color: #fff;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-header.headerProfile h1 {
-marge : 0 ;
-taille de police : 28 px ;
-transformation de texte : majuscule ;
-espacement des lettres : 2 px ;
+.headerProfile h1 {
+    margin: 0;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-formulaire {
-marge supérieure : 20 px ;
-affichage : flexible ;
-direction flexible : colonne ;
-align-items : centre ;
-largeur : 80 % ;
+.containerInscription {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px;
+    width: 100%;
 }
 
-étiquette {
-poids de la police : gras ;
-marge supérieure : 15 px ;
-couleur : #fff ;
-texte-ombre : 1px 1px 2px #000 ;
-taille de police : 1,2 em ;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-entrée[type="text"],
-entrée[type="date"],
-entrée[type="email"],
-entrée[type="mot de passe"],
-zone de texte,
-sélectionner {
-largeur : 100 % ;
-remplissage : 15 px ;
-marge : 10px 0 ;
-bordure : 1px solide #ccc ;
-rayon de bordure : 5 px ;
-arrière-plan : rgba(255, 255, 255, 0,7) ;
-taille de police : 1,1em ;
+label {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+    font-size: 1.2em;
 }
 
-entrée[type="radio"],
-entrée[type="checkbox"] {
-marge droite : 10 px ;
-transformation : échelle (1.2);
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 1.1em;
 }
 
-bouton {
-couleur d'arrière-plan : #6B73FF ;
-couleur : #fff ;
-curseur : pointeur ;
-remplissage : 15 px ;
-bordure : aucune ;
-rayon de bordure : 5 px ;
-transition : facilité de couleur d'arrière-plan de 0,3 s ;
-largeur : 100 % ;
-marge supérieure : 20 px ;
-transformation de texte : majuscule ;
-poids de la police : gras ;
-taille de police : 1,2 em ;
+.gender-options {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
-bouton : survoler {
-couleur d'arrière-plan : #000DFF ;
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
 }
 
-un {
-bloc de visualisation;
-alignement du texte : centre ;
-marge supérieure : 20 px ;
-couleur : #fff ;
-décoration de texte : aucune ;
-transition : couleur facilité 0,3 s ;
-texte-ombre : 1px 1px 2px #000 ;
-taille de police : 1,1em ;
+button {
+    background-color: #98fb98; /* pastel sea green */
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
-a: survolez {
-couleur : #ddd ;
+button:hover {
+    background-color: #2e8b57; /* darker shade of pastel sea green */
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #2e8b57; /* Use pastel sea green for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 1.1em;
+}
+
+a:hover {
+    color: #98fb98; /* Lighter shade on hover */
 }
 
 #profile_pic_preview {
-affichage : aucun ;
-largeur maximale : 100 px ;
-marge supérieure : 10 px ;
-rayon de bordure : 50 % ;
-box-shadow : 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    max-width: 100px;
+    margin-top: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-entrée[type="fichier"] {
-marge supérieure : 10 px ;
-couleur : #fff ;
+input[type="file"] {
+    margin-top: 10px;
+    color: #2e8b57; /* Use pastel sea green for file input */
 }
