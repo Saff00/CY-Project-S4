@@ -20,7 +20,8 @@ Ce projet est un site de rencontre permettant aux utilisateurs pationnées du vo
 
 
 # Accéder au répertoire du projet
-CY-Project-S4
+CY-Project-S4 , 
+branche: siteweb
 
 # Installer les dépendances
 php
