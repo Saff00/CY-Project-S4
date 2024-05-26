@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
 $filename = 'utilisateurs.txt';
-
+$blocked_file = 'utilisateurs_bloques.txt';
 if (!file_exists($filename)) {
     die("Le fichier des utilisateurs n'existe pas.");
 }
@@ -212,7 +212,7 @@ foreach ($lines as $line) {
     <script>
         function blockUser(userId) {
             var xhttp = new XMLHttpRequest();
-           
+            xhttp.open("POST", "block_user.php", true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -225,7 +225,8 @@ foreach ($lines as $line) {
             xhttp.send("user_id=" + userId);
         }
 
-       
+        function showBlockedUsers() {
+            window.location.href = 'get_blocked_users.php';
         }
 
         function closeModal() {
@@ -236,7 +237,7 @@ foreach ($lines as $line) {
 </head>
 <body>
     <div class="bhead">
-        <h1 class="header-title"><a href="index.html">voyage</a></h1>
+        <h1 class="header-title"><a href="index.html">Cardate</a></h1>
         <div class="header-buttons">
             <button onclick="window.location.href='rech_ajax.html'">Recherche</button>
         </div>
@@ -255,10 +256,10 @@ foreach ($lines as $line) {
             echo "<h2>" . htmlspecialchars($user_data[0]) . " " . htmlspecialchars($user_data[1]) . "</h2>";
             echo "<p><strong>Date de naissance:</strong> " . htmlspecialchars($user_data[2]) . "</p>";
             echo "<p><strong>Sexe:</strong> " . htmlspecialchars($user_data[3]) . "</p>";
-        
-        
+            echo "<p><strong>Description physique:</strong> " . htmlspecialchars($user_data[4]) . "</p>";
+            echo "<p><strong>Statut relationnel:</strong> " . htmlspecialchars($user_data[5]) . "</p>";
             echo "<p><strong>Ville:</strong> " . htmlspecialchars($user_data[6]) . "</p>";
-           
+            echo "<a href='detail.php?user_id=" . htmlspecialchars($user_id) . "' class='profile-button'>Voir le détail</a>";
             echo "<button class='block-button' onclick='blockUser(\"" . htmlspecialchars($user_id) . "\")'>Bloquer</button>";
             echo "</div>";
             $count++;
