@@ -27,4 +27,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: page_connexion.html?error=1");
         exit();
     }
-
