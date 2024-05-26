@@ -13,7 +13,7 @@ Ce projet est un site de rencontre permettant aux utilisateurs pationnées du vo
  Aprés avoir installer le projet sur votre ordi ,veuillez accéeder a votre terminal et lancer un localhost:8080 , ouvrir le fichier 
  index.html dans votre navigateur web pour accéder a la page principale.
 
- [Contributeurs] Sedqui Wiame ,Abida Seyda ,Aicha Eish 
+ [Contributeurs] Sedqui Wiame ,Abida Syeda ,Aicha Eish 
 
 
 ### Instructions
