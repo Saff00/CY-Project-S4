@@ -9,6 +9,7 @@ if (isset($_SESSION['email'])) {
 ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,34 +17,43 @@ if (isset($_SESSION['email'])) {
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-image: url('voyage.jpg');
+            background-image: url('pgin.jpg'); 
+            background-size: cover;
+            background-attachment: fixed;
         }
+
         .bhead {
-            background-color: black;
+            background-color: rgba(0, 0, 0, 0.8);
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .header-title {
             margin: 0;
             padding: 0;
         }
+
         .header-title a {
             color: white;
             text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
         }
+
         .header-title a:hover {
             text-decoration: underline;
         }
+
         .header-buttons {
             display: flex;
         }
+
         .bhead button {
-            background-color: green;
+            background-color: #20b2aa; /* Pastel sea green */
             color: white;
             padding: 10px 20px;
             border: none;
@@ -52,21 +62,26 @@ if (isset($_SESSION['email'])) {
             font-size: 16px;
             margin-left: 10px;
         }
+
         .bhead button:hover {
-            background-color: #c40000;
+            background-color: #17a589;
         }
+
         form {
             max-width: 600px;
-            margin: 20px auto;
-            background: #fff;
+            margin: 80px auto 20px; 
+            background: rgba(255, 255, 255, 0.9); 
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
+
         label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
+
         input[type="text"],
         input[type="date"],
         input[type="email"],
@@ -74,30 +89,48 @@ if (isset($_SESSION['email'])) {
         textarea,
         select {
             width: calc(100% - 12px);
-            padding: 8px;
-            margin-bottom: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 16px;
         }
+
         button[type="submit"] {
-            background: green;
+            background: #20b2aa; /* Pastel sea green */
             color: #fff;
             border: none;
             padding: 10px 20px;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 18px;
+            display: block;
+            width: 100%;
+            margin-top: 10px;
         }
+
         button[type="submit"]:hover {
-            background: #c40000;
+            background: #17a589;
         }
+
         a {
             display: block;
-            margin-top: 10px;
+            margin-top: 20px;
             text-decoration: none;
             color: #007bff;
+            text-align: center;
         }
+
         a:hover {
             text-decoration: underline;
+        }
+
+        #profile_pic_preview {
+            display: none;
+            max-width: 200px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
     <script>
@@ -141,14 +174,18 @@ if (isset($_SESSION['email'])) {
                 reader.readAsDataURL(input.files[0]);
             }
         }
-        document.getElementById('profile_pic_input').addEventListener('change', function () {
-            previewProfilePic(this);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('profile_pic_input').addEventListener('change', function () {
+                previewProfilePic(this);
+            });
         });
     </script>
 </head>
+
 <body>
     <div class="bhead">
-        <h1 class="header-title"><a href="index.html">voyage</a></h1>
+        <h1 class="header-title"><a href="index.html">Travel Shuffle</a></h1>
         <div class="header-buttons">
             <button onclick="window.location.href='page_profil.php'">Retour au profil</button>
             <button onclick="window.location.href='dern_prof.php'">Consulter les profils</button>
@@ -166,18 +203,17 @@ if (isset($_SESSION['email'])) {
         <label for="male">Homme</label><br>
         <input type="radio" id="female" name="gender" value="femme" <?php echo ($user_data[3] == 'femme') ? 'checked' : ''; ?> required>
         <label for="female">Femme</label><br>
-      
-        </select><br>
         <label for="city">Ville :</label>
         <input type="text" name="city" value="<?php echo $user_data[6]; ?>" required><br>
         <label for="email">Email :</label>
         <input type="email" name="email" value="<?php echo $user_data[7]; ?>" required><br>
         <label for="profile_pic">Photo de profil :</label>
         <input type="file" name="profile_pic" id="profile_pic_input" accept="image/*"><br>
-        <img id="profile_pic_preview" src="#" alt="Prévisualisation de la photo de profil" style="display: none;"><br>
+        <img id="profile_pic_preview" src="#" alt="Prévisualisation de la photo de profil"><br>
         <button type="submit">Enregistrer les modifications</button>
     </form>
 </body>
+
 </html>
 <?php
             exit();
